@@ -1,0 +1,51 @@
+﻿@model Sample2.Models.TeamViewerViewModel
+
+@{
+    ViewData["Title"] = "Team Viewer";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <h1 class="text-center mb-4">Teams</h1>
+
+        @if (Model.Teams != null && Model.Teams.Any())
+        {
+            @foreach (var team in Model.Teams)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="team-name">@team.TeamName</h3>
+                        </div>
+                        <div class="card-body">
+                            @if (team.Members != null && team.Members.Any())
+                            {
+                                <ul class="list-group">
+                                    @foreach (var member in team.Members)
+                                    {
+                                        <li class="list-group-item">@member</li>
+                                    }
+                                </ul>
+                            }
+                            else
+                            {
+                                <p>No members available.</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No teams available.</p>
+        }
+
+    </div>
+
+    <div class="row mt-4">
+        <div class="col text-center">
+            <button id="changeTeamNames" class="btn btn-primary">Change Team Names</button>
+        </div>
+    </div>
+</div>

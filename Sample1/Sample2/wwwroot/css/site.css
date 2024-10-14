@@ -1,0 +1,91 @@
+body, h1, h2, h3, h4, h5, h6, p, a, li, span, div {
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.card {
+  background-color: #444444;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.card-header {
+  background-color: #555555;
+  border-bottom: 1px solid #666666;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.list-group-item {
+  background-color: #444444; 
+  color: #ffffff;
+  border: none; 
+  border-bottom: 1px solid #555555; 
+}
+
+.list-group-item:last-child {
+  border-bottom: none; 
+}
+
+.btn-primary {
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.btn-primary:hover {
+  background-color: #155a99;
+  border-color: #124b7c;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+.container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
